@@ -15,9 +15,7 @@
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; display: flex; }
-
-/* SIDEBAR */
-#sidebar { width: 220px; background: var(--bg2); border-right: 1px solid var(--border); padding: 0; display: flex; flex-direction: column; flex-shrink: 0; }
+#sidebar { width: 220px; background: var(--bg2); border-right: 1px solid var(--border); display: flex; flex-direction: column; flex-shrink: 0; }
 .logo { padding: 20px; border-bottom: 1px solid var(--border); }
 .logo h1 { font-size: 15px; font-weight: 600; color: var(--accent); }
 .logo p { font-size: 11px; color: var(--text3); margin-top: 2px; }
@@ -30,26 +28,18 @@ nav { padding: 12px; flex: 1; display: flex; flex-direction: column; gap: 4px; }
 .dot { width: 8px; height: 8px; background: var(--success); border-radius: 50%; }
 .rest-name { font-size: 12px; font-weight: 500; }
 .rest-sub { font-size: 11px; color: var(--text3); }
-
-/* MAIN */
 #main { flex: 1; overflow-y: auto; }
 .page { display: none; padding: 32px; }
 .page.active { display: block; }
 .page-title { font-size: 22px; font-weight: 600; letter-spacing: -0.5px; margin-bottom: 6px; }
 .page-sub { font-size: 13px; color: var(--text2); margin-bottom: 28px; }
-
-/* CARDS */
 .card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--r); padding: 20px; }
 .card-label { font-size: 11px; font-weight: 500; color: var(--text3); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 14px; }
 .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .row4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin-bottom: 20px; }
-
-/* STAT */
 .stat { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--r); padding: 18px 20px; }
 .stat-lbl { font-size: 11px; color: var(--text3); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
 .stat-val { font-size: 26px; font-weight: 600; font-family: 'DM Mono', monospace; letter-spacing: -1px; }
-
-/* BUTTONS */
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 9px 16px; border-radius: var(--rs); font-size: 13px; font-weight: 500; cursor: pointer; border: none; font-family: inherit; transition: all 0.15s; }
 .btn-p { background: var(--accent); color: #000; }
 .btn-p:hover { opacity: 0.85; }
@@ -58,14 +48,10 @@ nav { padding: 12px; flex: 1; display: flex; flex-direction: column; gap: 4px; }
 .btn-s:hover { border-color: var(--text3); }
 .btn-d { background: transparent; color: var(--danger); border: 1px solid #3a2020; font-size: 12px; padding: 5px 10px; }
 .btn-full { width: 100%; }
-
-/* FORM */
 .form-group { margin-bottom: 14px; }
 .form-label { font-size: 12px; color: var(--text2); margin-bottom: 6px; display: block; }
 .form-input { width: 100%; background: var(--bg3); border: 1px solid var(--border); border-radius: var(--rs); padding: 9px 12px; font-size: 13px; color: var(--text); font-family: inherit; outline: none; transition: border-color 0.15s; }
 .form-input:focus { border-color: var(--accent); }
-
-/* CAMERA */
 .cam-zone { aspect-ratio: 4/3; background: var(--bg3); border: 2px dashed var(--border); border-radius: var(--r); display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; position: relative; overflow: hidden; }
 .cam-zone:hover { border-color: var(--text3); }
 .cam-placeholder { display: flex; flex-direction: column; align-items: center; gap: 10px; color: var(--text3); }
@@ -73,15 +59,11 @@ nav { padding: 12px; flex: 1; display: flex; flex-direction: column; gap: 4px; }
 .cam-placeholder span { font-size: 13px; }
 #previewImg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: none; }
 input[type=file] { display: none; }
-
-/* SPINNER */
 .spinner { width: 22px; height: 22px; border: 2px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.7s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
 .loading { display: none; flex-direction: column; align-items: center; gap: 12px; padding: 32px; }
 .loading.show { display: flex; }
 .loading span { font-size: 13px; color: var(--text2); }
-
-/* RESULTS */
 .res-item { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 14px; }
 .res-item:last-child { border-bottom: none; }
 .res-price { font-family: 'DM Mono', monospace; font-weight: 500; }
@@ -92,28 +74,29 @@ input[type=file] { display: none; }
 .total-row { display: flex; justify-content: space-between; align-items: center; padding-top: 14px; border-top: 2px solid var(--border); margin-top: 6px; }
 .total-lbl { font-size: 13px; color: var(--text2); }
 .total-val { font-size: 26px; font-weight: 600; font-family: 'DM Mono', monospace; color: var(--accent); letter-spacing: -1px; }
-
-/* TABLE */
 .tbl { width: 100%; border-collapse: collapse; }
 .tbl th { font-size: 11px; color: var(--text3); text-transform: uppercase; letter-spacing: 0.06em; padding: 0 12px 10px; text-align: left; border-bottom: 1px solid var(--border); }
 .tbl td { padding: 11px 12px; font-size: 13px; border-bottom: 1px solid var(--border); }
 .tbl tr:last-child td { border-bottom: none; }
 .tbl tr:hover td { background: var(--bg3); }
 .price-cell { font-family: 'DM Mono', monospace; color: var(--accent); font-weight: 500; }
-
-/* EMPTY */
 .empty { text-align: center; padding: 36px; color: var(--text3); font-size: 13px; }
-
-/* ORDER ROW */
 .order-row { display: flex; justify-content: space-between; align-items: center; padding: 12px; background: var(--bg3); border-radius: var(--rs); margin-bottom: 8px; font-size: 13px; }
 .order-time { font-size: 11px; color: var(--text3); font-family: 'DM Mono', monospace; margin-top: 3px; }
 .order-amt { font-family: 'DM Mono', monospace; font-weight: 500; color: var(--accent); }
-
-/* TOAST */
 .toast { position: fixed; bottom: 24px; right: 24px; padding: 12px 18px; border-radius: var(--rs); font-size: 13px; z-index: 999; display: none; border: 1px solid var(--border); background: var(--bg2); }
 .toast.show { display: block; }
 .toast.ok { border-color: var(--success); color: var(--success); }
 .toast.err { border-color: var(--danger); color: var(--danger); }
+@media (max-width: 640px) {
+  body { flex-direction: column; }
+  #sidebar { width: 100%; flex-direction: row; flex-wrap: wrap; }
+  .logo { padding: 12px 16px; border-bottom: none; border-right: 1px solid var(--border); }
+  nav { flex-direction: row; padding: 8px; }
+  .rest-info { display: none; }
+  .row2, .row4 { grid-template-columns: 1fr; }
+  .page { padding: 16px; }
+}
 </style>
 </head>
 <body>
@@ -153,7 +136,6 @@ input[type=file] { display: none; }
 </div>
 
 <div id="main">
-
   <!-- KASİYER -->
   <div id="page-kasiyer" class="page active">
     <div class="page-title">Tabak Analizi</div>
@@ -240,7 +222,7 @@ input[type=file] { display: none; }
   <!-- AYARLAR -->
   <div id="page-ayarlar" class="page">
     <div class="page-title">Ayarlar</div>
-    <div class="page-sub">Restoran bilgileri ve API bağlantıları</div>
+    <div class="page-sub">Restoran bilgileri</div>
     <div class="card" style="max-width:480px">
       <div class="card-label">Bilgiler</div>
       <div class="form-group">
@@ -248,14 +230,13 @@ input[type=file] { display: none; }
         <input class="form-input" id="setName" placeholder="Restoranınızın adı" />
       </div>
       <div class="form-group">
-        <label class="form-label">Anthropic API Key</label>
-        <input class="form-input" id="setKey" type="password" placeholder="sk-ant-..." />
-        <div style="font-size:11px;color:var(--text3);margin-top:5px">console.anthropic.com adresinden alın</div>
+        <label class="form-label">Gemini API Key</label>
+        <input class="form-input" id="setKey" type="password" placeholder="AQ..." />
+        <div style="font-size:11px;color:var(--text3);margin-top:5px">aistudio.google.com adresinden alın — ücretsiz</div>
       </div>
       <button class="btn btn-p" onclick="saveSettings()">Kaydet</button>
     </div>
   </div>
-
 </div>
 
 <div class="toast" id="toast"></div>
@@ -264,13 +245,13 @@ input[type=file] { display: none; }
 const SURL = 'https://hpsnijhnexubaengzjud.supabase.co';
 const SKEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imhwc25pamhuZXh1YmFlbmd6anVkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAyMjIyNTksImV4cCI6MjA5NTc5ODI1OX0.QAz3oO7y4N7IOY3KVqs1cKM57SgTsJVJI5B7w3LhTjw';
 const RESTAURANT_ID = 'a18ef28e-8604-4102-9277-fe3e65f4ea20';
-
 const sb = supabase.createClient(SURL, SKEY);
+
 let menuItems = [];
 let imgBase64 = null;
+let imgMime = 'image/jpeg';
 let lastResult = null;
 
-// NAVİGASYON
 function goTo(page) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
@@ -279,7 +260,6 @@ function goTo(page) {
   if (page === 'rapor') loadOrders();
 }
 
-// MENÜ
 async function loadMenu() {
   const { data, error } = await sb.from('menu_items').select('*').eq('restaurant_id', RESTAURANT_ID).eq('active', true).order('name');
   if (error) { toast('Menü yüklenemedi: ' + error.message, 'err'); return; }
@@ -320,10 +300,10 @@ async function delItem(id) {
   toast('Silindi', 'ok');
 }
 
-// KASİYER
 document.getElementById('fileInput').addEventListener('change', function(e) {
   const file = e.target.files[0];
   if (!file) return;
+  imgMime = file.type || 'image/jpeg';
   const reader = new FileReader();
   reader.onload = ev => {
     imgBase64 = ev.target.result.split(',')[1];
@@ -352,7 +332,7 @@ function clearCam() {
 
 async function analyzeImage() {
   const settings = JSON.parse(localStorage.getItem('bpos') || '{}');
-  if (!settings.key) { toast('Ayarlar sayfasından API Key girin', 'err'); return; }
+  if (!settings.key) { toast('Ayarlar sayfasından Gemini API Key girin', 'err'); return; }
   if (menuItems.length === 0) { toast('Önce Menü sayfasından yemek ekleyin', 'err'); return; }
 
   document.getElementById('analyzeBtn').disabled = true;
@@ -361,26 +341,32 @@ async function analyzeImage() {
   document.getElementById('loadingState').classList.add('show');
 
   const menuText = menuItems.map(i => `- ${i.name}: ₺${i.price}`).join('\n');
-  const sys = `Sen açık büfe restoran kasiyer yapay zekasısın. Tabak fotoğrafına bakarak aşağıdaki menüden hangi yemeklerin olduğunu belirle.\n\nMenü:\n${menuText}\n\nSADECE şu JSON formatında yanıt ver:\n{"detected":[{"name":"menüdeki tam ad","confidence":"high|medium|low"}],"unmatched":["menüde olmayan yemekler"]}`;
+  const prompt = `Sen açık büfe restoran kasiyer yapay zekasısın. Bu tabak fotoğrafına bakarak aşağıdaki menüden hangi yemeklerin tabakta olduğunu belirle.
+
+Menü:
+${menuText}
+
+SADECE şu JSON formatında yanıt ver, başka hiçbir şey yazma:
+{"detected":[{"name":"menüdeki tam ad","confidence":"high|medium|low"}],"unmatched":["menüde olmayan yemekler"]}`;
 
   try {
     document.getElementById('loadingText').textContent = 'Yemekler tanınıyor...';
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
+    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${settings.key}`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'x-api-key': settings.key, 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        model: 'claude-opus-4-5',
-        max_tokens: 800,
-        system: sys,
-        messages: [{ role: 'user', content: [
-          { type: 'image', source: { type: 'base64', media_type: 'image/jpeg', data: imgBase64 } },
-          { type: 'text', text: 'Bu tabakta ne var?' }
-        ]}]
+        contents: [{
+          parts: [
+            { text: prompt },
+            { inline_data: { mime_type: imgMime, data: imgBase64 } }
+          ]
+        }],
+        generationConfig: { temperature: 0.1, maxOutputTokens: 800 }
       })
     });
     const data = await res.json();
     if (data.error) throw new Error(data.error.message);
-    const raw = data.content.map(c => c.text || '').join('').replace(/```json|```/g,'').trim();
+    const raw = data.candidates[0].content.parts[0].text.replace(/```json|```/g,'').trim();
     const parsed = JSON.parse(raw);
     document.getElementById('loadingText').textContent = 'Fiyatlar hesaplanıyor...';
     await new Promise(r => setTimeout(r, 300));
@@ -438,7 +424,6 @@ function printReceipt() {
 
 function resetKasiyer() { clearCam(); lastResult = null; }
 
-// RAPORLAR
 async function loadOrders() {
   const today = new Date(); today.setHours(0,0,0,0);
   const { data } = await sb.from('orders').select('*').eq('restaurant_id', RESTAURANT_ID).gte('created_at', today.toISOString()).order('created_at', { ascending: false });
@@ -464,7 +449,6 @@ async function loadOrders() {
   }).join('');
 }
 
-// AYARLAR
 function saveSettings() {
   const name = document.getElementById('setName').value.trim();
   const key = document.getElementById('setKey').value.trim();
@@ -479,18 +463,15 @@ function loadSettings() {
   if (s.key) document.getElementById('setKey').value = s.key;
 }
 
-// TOAST
 function toast(msg, type) {
   const t = document.getElementById('toast');
   t.textContent = msg; t.className = 'toast show ' + (type || 'ok');
   setTimeout(() => t.classList.remove('show'), 3000);
 }
 
-// ENTER
 document.getElementById('itemName').addEventListener('keydown', e => { if (e.key === 'Enter') document.getElementById('itemPrice').focus(); });
 document.getElementById('itemPrice').addEventListener('keydown', e => { if (e.key === 'Enter') addItem(); });
 
-// BAŞLAT
 loadSettings();
 loadMenu();
 </script>
