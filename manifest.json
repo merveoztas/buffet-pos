@@ -1,0 +1,22 @@
+{
+  "name": "Büfe POS",
+  "short_name": "BüfePOS",
+  "description": "Açık büfe yapay zeka fiyatlandırma sistemi",
+  "start_url": "/buffet-pos/",
+  "display": "standalone",
+  "background_color": "#0f0f0f",
+  "theme_color": "#e8ff47",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
